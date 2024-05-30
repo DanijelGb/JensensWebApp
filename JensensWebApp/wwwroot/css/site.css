@@ -13,8 +13,8 @@ html {
         background-repeat: no-repeat;
     }
 
-  card {
-        background-color: rgba(189, 195, 199, .60);
+  .card {
+        background-color: rgba(189, 195, 199, .70);
     }
 }
 
