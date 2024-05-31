@@ -1,5 +1,5 @@
 body {
-    background-image: url("../background.jpg");
+    background-image: url("../pexelsbackground.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,9 +7,25 @@ body {
 .cards-container{
     padding-top: 15px;
 }
+h1 {
+  color: rgb(211, 152, 15);
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Courier New', monospace;
+}
 .card-container {
     display: flex;
     justify-content: center;
+    font-family: 'Courier New', monospace;
+}
+.card-title {
+  font-family: 'FreeMono', monospace;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.card-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .card {
     background-color: rgba(200, 200, 200, 0.85);
@@ -23,4 +39,47 @@ body {
 .card:hover{
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, .3);
+}
+label {
+  font-size: 20px;
+  color: rgb(250, 23, 23);
+  font-family: 'Noto Sans', sans-serif;
+}
+.nav-link {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  color:antiquewhite;
+  background-color: green;
+  border: 2px solid black;
+  width: 80px;
+  padding: 20px 80px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 30%;
+}
+.nav-item {
+  color: rgb(137, 161, 40);
+  font-size: 30px;
+  font-style: normal;
+  list-style: none;
+}
+.navbar-nav{
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link:hover{
+  background-color: blue;
+}
+
+.navbar-brand {
+  color: rgb(224, 197, 76);
+  font-size: 20px;
+  text-decoration: none;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.nav-link:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
