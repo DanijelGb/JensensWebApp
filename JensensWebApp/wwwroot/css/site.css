@@ -14,7 +14,7 @@ h1 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 24%;
+  width: 310px;
 }
 .card-container {
     display: flex;
@@ -95,18 +95,14 @@ label {
   transition-duration: 0.4s;
 
 }
-.pb-3:nth-chld(1){
-  background-color: rgb(250, 23, 23);
-  width: 320px;
-}
+
 .text-muted {
   background-color: rgb(250, 23, 23);
-  width: 180px;
   margin-top: 10px;
 }
 .border-top {
   background-color: rgb(250, 23, 23);
-  width: 180px;
+  width: 230px;
 }
 .navbar-brand {
   color: rgb(224, 197, 76);
