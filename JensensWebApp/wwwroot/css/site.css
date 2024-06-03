@@ -90,10 +90,6 @@ h5 {
     margin-right: 4vw;
 }
 
-.navbar-item {
-    font-size: 30px;
-}
-
 .navbar-links {
     display: flex;
     text-decoration: none;
@@ -101,7 +97,7 @@ h5 {
 }
 
 .nav-link {
-    font-size: 1.3rem;
+    font-size: 3vw;
     text-decoration: none;
     color: black;
 }
@@ -248,3 +244,7 @@ form {
     .image:hover img {
         transform: translateY(-5px);
     }
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
