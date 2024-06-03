@@ -155,22 +155,23 @@ form {
 
 /*footer*/
 .footer-container{
-  margin-top: 40px;
+  margin-top: 4vw;
   display: flex;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
-  height: 80px;
   align-items: center;
-  justify-content: space-between;
   background-color: rgba(170, 170, 170, 0.85);
   border-radius: 1rem;
-  font-size: 20px;
-  padding: 0 10rem;
+  font-size: 5.3vw;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  padding-left: 5vw;
 }
 
 .footer-container a {
-  margin-left: 5%;
   color: black;
   text-decoration: none;
+  margin-left:auto;
+  margin-right: 5vw;
 }
 
 .footer-container a:hover {
@@ -179,13 +180,14 @@ form {
 
 /*arrow up*/
 .image {
+
   position: fixed;
   bottom: 30px;
   right: 40px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
