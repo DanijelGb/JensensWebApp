@@ -6,10 +6,10 @@
     Dictionary<string, string> topicDisplayNames = new Dictionary<string, string>
 {
     {"Halsa", "Hälsa"},
-    {"SamhalleKonflikter", "Samhälle och Konflikter"},
+    {"SamhalleKonflikter", "Samhälle/Konflikter"},
     {"Miljo", "Miljö"},
-    {"VetenskapTeknik", "Vetenskap och Teknik"},
-    {"LivsstillFritt", "Livsstil och Fritid"},
+    {"VetenskapTeknik", "Vetenskap/Teknik"},
+    {"LivsstillFritt", "Livsstil/Fritid"},
     {"Ekonomi", "Ekonomi"},
     {"Religion", "Religion"},
     {"Idrott", "Idrott"}
@@ -22,18 +22,16 @@
 <div class="container">
     @using (Html.BeginForm("Index", "Home", FormMethod.Get))
     {
-        <label for="topic">Select a topic:</label>
         <select id="topic" name="topic" class="form-select">
-            <option value="">All</option>
+            <option value="">Select a topic:</option>
             @foreach (var topic in topicDisplayNames)
             {
                 <option value="@topic.Key">@topic.Value</option>
             }
         </select>
 
-        <label for="sortBy">Sort by:</label>
         <select id="sortBy" name="sortBy" class="form-select">
-            <option value="">Default</option>
+            <option value="">Sort by:</option>
             <option value="newest">Newest to Oldest</option>
             <option value="oldest">Oldest to Newest</option>
         </select>
