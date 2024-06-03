@@ -106,9 +106,9 @@ h5 {
     color: black;
 }
 
-    .nav-link:hover {
-        text-decoration: underline;
-    }
+.nav-link:hover {
+    text-decoration: underline;
+}
 
 /*Bild kommer från https://cooltext.com/Logo-Design-Chrome-One*/
 .article-pic {
@@ -124,13 +124,13 @@ form {
     display: flex;
     background-color: rgba(200, 200, 200, 0.85);
     border-radius: 1rem;
-    width: 95vw;
     gap: 2vw;
     padding-top: 2vw;
     padding-bottom: 2vw;
 }
 
 #topic {
+    appearance: none;
     background: transparent;
     border: none;
     font-size: 5vw;
@@ -143,6 +143,10 @@ form {
     border: none;
     font-size: 5vw;
     width: 27%;
+}
+
+#sortBy option{
+    font-size: 3vw;
 }
 
 
