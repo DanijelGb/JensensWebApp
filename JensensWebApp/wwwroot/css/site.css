@@ -558,6 +558,10 @@ form {
     .navbar-brand{
         font-size: 2vw;
     }
+     .navbar-nav{
+         gap: 6vw;
+         margin-right: 6vw;
+     }
     
     .article-pic {
         margin-bottom: 2vw;
@@ -566,21 +570,21 @@ form {
         height: auto;
     }
 
-
     form {
-        padding-top: 0.9vw;
-        padding-bottom: 0.9vw;
-        width: 60vw;
+        padding-top: 0.7vw;
+        padding-bottom: 0.7vw;
+        width: 30vw;
+        gap: 2vw;
     }
 
     #select-topic-container {
         margin-left: 2vw;
-        width: 13%;
+        width: 27%;
     }
 
     #select-sort-container {
         margin-left: 0.5vw;
-        width: 8%;
+        width: 18%;
     }
 
     #topic {
@@ -616,23 +620,27 @@ form {
         margin-right: 1vw;
     }
     
+    .cards-container{
+        padding-top: 2vw;
+    }
+
     .card {
         margin-top: 0.5vw;
-        width: 70vw;
-        padding-left: 2vw;
-        padding-right: 2vw;
+        width: 75vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
     }
     
     .card-body h5 {
-        font-size: 3vw;
-        margin-top: 2vw;
-        margin-bottom: 2vw;
+        font-size: 2vw;
+        margin-top: 1.5vw;
+        margin-bottom: 1vw;
     }
 
     .card-text {
-        font-size: 1.8vw;
+        font-size: .8vw;
         margin-top: 0;
-        margin-bottom: 1vw;
+        margin-bottom: 0.5vw;
     }
     
     .card-body a{
