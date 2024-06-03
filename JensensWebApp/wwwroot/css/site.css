@@ -124,31 +124,70 @@ form {
     display: flex;
     background-color: rgba(200, 200, 200, 0.85);
     border-radius: 1rem;
-    gap: 2vw;
+    gap: 5vw;
     padding-top: 2vw;
     padding-bottom: 2vw;
 }
-
+#select-topic-container {
+    display:flex;
+    position: relative;
+    width: 40%;
+    margin-left: 4vw;
+    align-items: center;
+}
+#select-sort-container {
+    display:flex;
+    align-items: center;
+    position: relative;
+    width: 27%;
+}
 #topic {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    border: none;
+    font-size: 5vw;
+    width: 100%;
+    padding-right: 1.5em;
+    box-sizing: border-box;
+}
+
+#select-topic-container::after {
+    content: '▼';
+    font-size: 4.5vw;
+    position: absolute;
+    top: 56%;
+    right: 0.3em;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#select-sort-container::after {
+    content: '▼';
+    font-size: 4.5vw;
+    position: absolute;
+    top: 56%;
+    right: 0.3em;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+
+#sortBy {
     appearance: none;
     background: transparent;
     border: none;
     font-size: 5vw;
-    width: 40%;
-    margin-left: 2vw;
-}
-
-#sortBy {
-    background: transparent;
-    border: none;
-    font-size: 5vw;
-    width: 27%;
 }
 
 #sortBy option{
     font-size: 3vw;
 }
 
+#topic option{
+    font-size: 3vw;
+}
 
 /*button*/
 .btn {
@@ -156,7 +195,7 @@ form {
     color: rgba(200, 200, 200, 0.85);
     border: none;
     border-radius: 1rem;
-    padding: 2vw 3vw;
+    padding: 2vw;
     font-size: 5vw;
     margin-left: auto;
     margin-right: 2vw;
