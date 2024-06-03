@@ -54,12 +54,10 @@ text-align: center;
   display: flex;
   height: 60px;
   align-items: center;
-  justify-content: space-between;
   background-color: rgba(200, 200, 200, 0.85);
   border-radius: 1rem;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
-
-}
+  }
 
 .navbar-toggler {
   background-color: black;
@@ -67,29 +65,27 @@ text-align: center;
 }
 
 .navbar-brand {
-  font-size: 40px;
-  margin-left: 5%;
+  font-size: 5.5vw;
+  margin-left: 4vw;
   color: black;
   text-decoration: none;
 }
 
 .navbar-collapse {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 7%;
+  width: 100%;
+  justify-content: right;
 }
 
 .navbar-nav {
   display: flex;
   flex-direction: row;
-  gap: 7rem;
+  gap: 3vw;
   list-style: none;
-  padding-left: 0%;
-  margin: 0%;
+  margin-right: 4vw;
 }
 
 .navbar-item {
-  margin-right: 7rem;
   font-size: 30px;
 }
 
