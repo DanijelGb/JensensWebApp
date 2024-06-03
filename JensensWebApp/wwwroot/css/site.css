@@ -1,139 +1,144 @@
 /*background*/
 body {
-  background-image: url("../background.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*cards*/
 .cards-container {
-  padding-top: 15px;
+    padding-top: 5vw;
 }
 
 .card-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .card {
-  background-color: rgba(200, 200, 200, 0.85);
-  width: 75vw;
-  margin-top: 10px;
-  padding: 15px;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
-  transition: .1s ease-in-out;
-  border-radius: 3rem;
+    background-color: rgba(200, 200, 200, 0.85);
+    width: 95vw;
+    margin-top: 3vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+    transition: .1s ease-in-out;
+    border-radius: 3rem;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, .3);
-}
-h5{
-  font-size: 1.7rem;
-text-align: center;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, .3);
 }
 
-.card-text{
-  font-size: 1.3rem;
-  text-align: center;
+h5 {
+    font-size: 9vw;
+    text-align: center;
+    margin-top: 5vw;
+    margin-bottom: 0;
 }
 
-.card-body a{
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  font-size: 1.3rem;
+.card-text {
+    font-size: 6vw;
+    text-align: center;
 }
 
-
+.card-body a {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+    font-size: 5vw;
+}
+.text-muted{
+    font-size: 4vw;
+}
 /*navigationbar*/
 .container-fluid {
-  display: flex;
-  height: 60px;
-  align-items: center;
-  background-color: rgba(200, 200, 200, 0.85);
-  border-radius: 1rem;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
-  }
+    display: flex;
+    height: 60px;
+    align-items: center;
+    background-color: rgba(200, 200, 200, 0.85);
+    border-radius: 1rem;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+}
 
 .navbar-toggler {
-  background-color: black;
-  place-content: center;
+    background-color: black;
+    place-content: center;
 }
 
 .navbar-brand {
-  font-size: 5.5vw;
-  margin-left: 4vw;
-  color: black;
-  text-decoration: none;
+    font-size: 5.5vw;
+    margin-left: 4vw;
+    color: black;
+    text-decoration: none;
 }
 
 .navbar-collapse {
-  display: flex;
-  width: 100%;
-  justify-content: right;
+    display: flex;
+    width: 100%;
+    justify-content: right;
 }
 
 .navbar-nav {
-  display: flex;
-  flex-direction: row;
-  gap: 3vw;
-  list-style: none;
-  margin-right: 4vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    list-style: none;
+    margin-right: 4vw;
 }
 
 .navbar-item {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .navbar-links {
-  display: flex;
-  text-decoration: none;
-  gap: 1rem;
+    display: flex;
+    text-decoration: none;
+    gap: 1rem;
 }
 
 .nav-link {
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: black;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
-}
+    .nav-link:hover {
+        text-decoration: underline;
+    }
 
 /*Bild kommer från https://cooltext.com/Logo-Design-Chrome-One*/
 .article-pic {
-  display: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6vw;
-  width: 310px;
+    display: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6vw;
+    width: 310px;
 }
 /*topic & sortBy form*/
 form {
-  display: flex;
-  background-color: rgba(200, 200, 200, 0.85);
-  border-radius: 1rem;
-  width: 95vw;
-  gap: 2vw;
-  padding-top: 2vw;
-  padding-bottom: 2vw;
+    display: flex;
+    background-color: rgba(200, 200, 200, 0.85);
+    border-radius: 1rem;
+    width: 95vw;
+    gap: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }
 
 #topic {
-  background: transparent;
-  border: none;
-  font-size: 5vw;
-  width: 40%;
-  margin-left: 2vw;
+    background: transparent;
+    border: none;
+    font-size: 5vw;
+    width: 40%;
+    margin-left: 2vw;
 }
 
-#sortBy{
+#sortBy {
     background: transparent;
     border: none;
     font-size: 5vw;
@@ -143,61 +148,60 @@ form {
 
 /*button*/
 .btn {
-  background-color: black;
-  color: rgba(200, 200, 200, 0.85);
-  border: none;
-  border-radius: 1rem;
-  padding: 2vw 3vw;
-  font-size: 5vw;
+    background-color: black;
+    color: rgba(200, 200, 200, 0.85);
+    border: none;
+    border-radius: 1rem;
+    padding: 2vw 3vw;
+    font-size: 5vw;
     margin-left: auto;
     margin-right: 2vw;
 }
 
 /*footer*/
-.footer-container{
-  margin-top: 4vw;
-  display: flex;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
-  align-items: center;
-  background-color: rgba(170, 170, 170, 0.85);
-  border-radius: 1rem;
-  font-size: 5.3vw;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
-  padding-left: 5vw;
+.footer-container {
+    margin-top: 4vw;
+    display: flex;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+    align-items: center;
+    background-color: rgba(170, 170, 170, 0.85);
+    border-radius: 1rem;
+    font-size: 5.3vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    padding-left: 5vw;
 }
 
-.footer-container a {
-  color: black;
-  text-decoration: none;
-  margin-left:auto;
-  margin-right: 5vw;
-}
+    .footer-container a {
+        color: black;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: 5vw;
+    }
 
-.footer-container a:hover {
-  text-decoration: underline;
-}
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
 
 /*arrow up*/
 .image {
-
-  position: fixed;
-  bottom: 30px;
-  right: 40px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: none;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.image img {
-  width: 50px;
-  height: 60px;
-  transition: transform 0.3s, box-shadow 0.3s; 
-}
+    .image img {
+        width: 50px;
+        height: 60px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-.image:hover img {
-  transform: translateY(-5px);
-}
+    .image:hover img {
+        transform: translateY(-5px);
+    }
