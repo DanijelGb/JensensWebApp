@@ -57,11 +57,11 @@ h5 {
 /*navigationbar*/
 .container-fluid {
     display: flex;
-    height: 60px;
     align-items: center;
     background-color: rgba(200, 200, 200, 0.85);
     border-radius: 1rem;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+    padding: 1vw;
 }
 
 .navbar-toggler {
@@ -248,6 +248,9 @@ form {
 
 /* Styles for small screens*/
 @media (min-width: 576px) and (max-width: 767px) {
+    .container-fluid{
+        padding: 1vw;
+    }
     .nav-link{
         font-size: 3vw;
     }
@@ -336,6 +339,9 @@ form {
 }
 /* Styles for medium screens */
 @media (min-width: 768px) and (max-width: 991px) {
+    .container-fluid{
+        padding: 1vw;
+    }
     .nav-link {
         font-size: 4vw;
     }
@@ -551,8 +557,11 @@ form {
 
 /* Styles for extra large devices */
 @media (min-width: 1200px) {
+    .container-fluid{
+        padding: .5vw;
+    }
     .nav-link{
-        font-size: 1vw;
+        font-size: 1.2vw;
     }
 
     .navbar-brand{
@@ -606,11 +615,11 @@ form {
     }
 
     #sortBy option {
-        font-size: .4vw;
+        font-size: 1vw;
     }
 
     #topic option {
-        font-size: .4vw;
+        font-size: 1vw;
     }
 
     .btn {
@@ -632,34 +641,34 @@ form {
     }
     
     .card-body h5 {
-        font-size: 2vw;
-        margin-top: 1.5vw;
+        font-size: 1.8vw;
+        margin-top: 2.5vw;
         margin-bottom: 1vw;
     }
 
     .card-text {
-        font-size: .8vw;
+        font-size: 1.1vw;
         margin-top: 0;
-        margin-bottom: 0.5vw;
+        margin-bottom: 1vw;
     }
     
     .card-body a{
         margin-bottom: 0.5vw;
-        font-size: 1.5vw;
+        font-size: .8vw;
         margin-top: 0.5vw; 
     }
 
     .text-muted{
-        font-size: 1vw;
+        font-size: .5vw;
     }
     
     .footer-container {
-        font-size: 2vw;
-        padding-left: 6vw;
-        padding-right: 6vw;
-        padding-top: 1.5vw;
-        padding-bottom: 1.5vw;
-        margin-top: 2vw;
+        font-size: 1vw;
+        padding-left: 4.5vw;
+        padding-right: 4.5vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        margin-top: 1vw;
     }
 
     .image {
