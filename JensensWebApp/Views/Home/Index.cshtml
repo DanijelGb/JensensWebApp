@@ -4,18 +4,20 @@
     ViewBag.Title = "Articles";
 
     Dictionary<string, string> topicDisplayNames = new Dictionary<string, string>
-{
-    {"Halsa", "Hälsa"},
-    {"SamhalleKonflikter", "Samhälle/Konflikter"},
-    {"Miljo", "Miljö"},
-    {"VetenskapTeknik", "Vetenskap/Teknik"},
-    {"LivsstillFritt", "Livsstil/Fritid"},
-    {"Ekonomi", "Ekonomi"},
-    {"Religion", "Religion"},
-    {"Idrott", "Idrott"}
-};
-
+    {
+        {"Halsa", "Hälsa"},
+        {"SamhalleKonflikter", "Samhälle/Konflikter"},
+        {"Miljo", "Miljö"},
+        {"VetenskapTeknik", "Vetenskap/Teknik"},
+        {"LivsstillFritt", "Livsstil/Fritid"},
+        {"Ekonomi", "Ekonomi"},
+        {"Religion", "Religion"},
+        {"Idrott", "Idrott"}
+    };
 }
+
+<input type="checkbox" id="dark-mode-checkbox" class="dark-mode-checkbox">
+<label for="dark-mode-checkbox" class="dark-mode-toggle">Dark Mode</label>
 
 <h1>Articles</h1>
 
@@ -55,3 +57,4 @@
         }
     </div>
 </div>
+

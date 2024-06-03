@@ -1,13 +1,24 @@
-/*background*/
+/* Default dark mode styles */
+body.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --link-color: #9ecfff;
+  --link-hover-color: #68aee8;
+  --article-background-color: #2a2a2a;
+  --article-border-color: #3e3e3e;
+}
+
+/* Background */
 body {
   background-image: url("../background.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/*cards*/
+/* Cards */
 .cards-container {
   padding-top: 15px;
 }
@@ -31,25 +42,25 @@ body {
   transform: translateY(-5px);
   box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, .3);
 }
-h5{
+
+h5 {
   font-size: 1.7rem;
-text-align: center;
+  text-align: center;
 }
 
-.card-text{
+.card-text {
   font-size: 1.3rem;
   text-align: center;
 }
 
-.card-body a{
+.card-body a {
   display: flex;
   justify-content: center;
   margin-top: 10px;
   font-size: 1.3rem;
 }
 
-
-/*navigationbar*/
+/* Navigation bar */
 .container-fluid {
   display: flex;
   height: 60px;
@@ -58,7 +69,6 @@ text-align: center;
   background-color: rgba(200, 200, 200, 0.85);
   border-radius: 1rem;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
-
 }
 
 .navbar-toggler {
@@ -109,19 +119,18 @@ text-align: center;
   text-decoration: underline;
 }
 
-/*h1*/
+/* Header */
 h1 {
   text-align: center;
   font-size: 5rem;
   margin-top: 5%;
-  text-shadow:
-   -1px -1px 0 rgba(200, 200, 200, 0.0),
-    1px -1px 0 rgba(200, 200, 200, 0.0),
-   0 1px 0 rgba(200, 200, 200, 1),
-    1px 1px 0 rgba(200, 200, 200, 1);
+  text-shadow: -1px -1px 0 rgba(200, 200, 200, 0.0),
+   1px -1px 0 rgba(200, 200, 200, 0.0),
+    0 1px 0 rgba(200, 200, 200, 1),
+     1px 1px 0 rgba(200, 200, 200, 1);
 }
 
-/*topic & sortBy form*/
+/* Topic & SortBy form */
 form {
   display: flex;
   height: 60px;
@@ -142,16 +151,15 @@ form {
   font-size: 1rem;
 }
 
-#sortBy{
-    background: transparent;
-    border: none;
-    width: 100px;
-    margin-right: 40px;
-    font-size: 1rem;
+#sortBy {
+  background: transparent;
+  border: none;
+  width: 100px;
+  margin-right: 40px;
+  font-size: 1rem;
 }
 
-
-/*button*/
+/* Button */
 .btn {
   background-color: black;
   color: rgba(200, 200, 200, 0.85);
@@ -162,8 +170,8 @@ form {
   margin-right: 15px;
 }
 
-/*footer*/
-.footer-container{
+/* Footer */
+.footer-container {
   margin-top: 40px;
   display: flex;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
@@ -186,3 +194,65 @@ form {
   text-decoration: underline;
 }
 
+/* Light mode */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --article-background-color: #f8f9fa;
+  --article-border-color: #e9ecef;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  background-color: var(--article-border-color);
+  border: none;
+  border-radius: 4px;
+  color: var(--text-color);
+  cursor: pointer;
+  position: relative;
+  top: 1rem;
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.dark-mode-checkbox {
+  display: none; /* Hide the checkbox */
+}
+
+/* Apply dark mode styles when checkbox is checked */
+.dark-mode-checkbox:checked + .dark-mode-toggle {
+  background-color: #333; /* Change to your preferred dark mode color */
+  color: #fff; /* Change to your preferred text color for dark mode */
+}
+
+/* Apply dark mode styles to other elements when checkbox is checked */
+.dark-mode-checkbox:checked ~ body {
+  background-color: #222; /* Change to your preferred background color for dark mode */
+  color: #fff; /* Change to your preferred text color for dark mode */
+}
+
+.dark-mode-checkbox:checked ~ a {
+  color: #9ecfff; /* Change to your preferred link color for dark mode */
+}
+
+.dark-mode-checkbox:checked ~ a:hover {
+  color: #68aee8; /* Change to your preferred link hover color for dark mode */
+}
+
+.dark-mode-checkbox:checked ~ .card {
+  background-color: #2a2a2a; 
+border-color: var(--article-border-color);
+}
+
+/* Dark mode */
+.dark-mode-checkbox:checked ~ .container {
+  background-color: #222; /* Change to your preferred background color for dark mode */
+  color: #fff; /* Change to your preferred text color for dark mode */
+}
+
+.dark-mode-checkbox:checked ~ .dark-mode-toggle {
+  background-color: #333; /* Change to your preferred dark mode color */
+  color: #fff; /* Change to your preferred text color for dark mode */
+}
