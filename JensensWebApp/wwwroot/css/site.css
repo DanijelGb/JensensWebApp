@@ -109,18 +109,16 @@ text-align: center;
   text-decoration: underline;
 }
 
-/*h1*/
-h1 {
-  text-align: center;
-  font-size: 5rem;
-  margin-top: 5%;
-  text-shadow:
-   -1px -1px 0 rgba(200, 200, 200, 0.0),
-    1px -1px 0 rgba(200, 200, 200, 0.0),
-   0 1px 0 rgba(200, 200, 200, 1),
-    1px 1px 0 rgba(200, 200, 200, 1);
+/*Bild kommer från https://cooltext.com/Logo-Design-Chrome-One*/
+.article-pic {
+  display: none;
+  font-size: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width: 310px;
 }
-
 /*topic & sortBy form*/
 form {
   display: flex;
