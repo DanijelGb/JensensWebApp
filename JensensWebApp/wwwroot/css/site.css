@@ -108,40 +108,36 @@ text-align: center;
 /*Bild kommer från https://cooltext.com/Logo-Design-Chrome-One*/
 .article-pic {
   display: none;
-  font-size: 50px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 6vw;
   width: 310px;
 }
 /*topic & sortBy form*/
 form {
   display: flex;
-  height: 60px;
-  width: 500px;
-  align-items: center;
-  justify-content: space-between;
   background-color: rgba(200, 200, 200, 0.85);
   border-radius: 1rem;
-  margin: 0 auto;
-  padding: 0 1rem;
+  width: 95vw;
+  gap: 2vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
 }
 
 #topic {
   background: transparent;
   border: none;
-  width: 135px;
-  margin-left: 20px;
-  font-size: 1rem;
+  font-size: 5vw;
+  width: 40%;
+  margin-left: 2vw;
 }
 
 #sortBy{
     background: transparent;
     border: none;
-    width: 100px;
-    margin-right: 40px;
-    font-size: 1rem;
+    font-size: 5vw;
+    width: 27%;
 }
 
 
@@ -151,9 +147,10 @@ form {
   color: rgba(200, 200, 200, 0.85);
   border: none;
   border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  margin-right: 15px;
+  padding: 2vw 3vw;
+  font-size: 5vw;
+    margin-left: auto;
+    margin-right: 2vw;
 }
 
 /*footer*/
