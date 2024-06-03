@@ -186,3 +186,25 @@ form {
   text-decoration: underline;
 }
 
+/*arrow up*/
+.image {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  width: 50px;
+  height: 60px;
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.image:hover img {
+  transform: translateY(-5px);
+}
