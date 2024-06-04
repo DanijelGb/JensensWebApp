@@ -1,6 +1,5 @@
-/* Default dark mode styles */
 body.dark-mode {
-  --background-color: #1a1a1a;
+  background-color: #1a1a1a;
   --text-color: #ffffff;
   --link-color: #9ecfff;
   --link-hover-color: #68aee8;
@@ -212,33 +211,31 @@ form {
   color: var(--text-color);
   cursor: pointer;
   position: relative;
-  top: 1rem;
+  top: 2rem;
   margin: 2rem;
   padding: 0.5rem 1rem;
 }
 
 .dark-mode-checkbox {
-  display: none; /* Hide the checkbox */
+  display: none;
 }
 
-/* Apply dark mode styles when checkbox is checked */
 .dark-mode-checkbox:checked + .dark-mode-toggle {
-  background-color: #333; /* Change to your preferred dark mode color */
-  color: #fff; /* Change to your preferred text color for dark mode */
+  background-color: #333; 
+  color: #fff; 
 }
 
-/* Apply dark mode styles to other elements when checkbox is checked */
 .dark-mode-checkbox:checked ~ body {
-  background-color: #222; /* Change to your preferred background color for dark mode */
-  color: #fff; /* Change to your preferred text color for dark mode */
+  background-color: #222; 
+  color: #fff; 
 }
 
 .dark-mode-checkbox:checked ~ a {
-  color: #9ecfff; /* Change to your preferred link color for dark mode */
+  color: #9ecfff;
 }
 
 .dark-mode-checkbox:checked ~ a:hover {
-  color: #68aee8; /* Change to your preferred link hover color for dark mode */
+  color: #68aee8; 
 }
 
 .dark-mode-checkbox:checked ~ .card {
@@ -246,13 +243,12 @@ form {
 border-color: var(--article-border-color);
 }
 
-/* Dark mode */
 .dark-mode-checkbox:checked ~ .container {
-  background-color: #222; /* Change to your preferred background color for dark mode */
-  color: #fff; /* Change to your preferred text color for dark mode */
+  background-color: #222;
+  color: #fff;
 }
 
 .dark-mode-checkbox:checked ~ .dark-mode-toggle {
-  background-color: #333; /* Change to your preferred dark mode color */
-  color: #fff; /* Change to your preferred text color for dark mode */
+  background-color: #333; 
+  color: #fff;
 }

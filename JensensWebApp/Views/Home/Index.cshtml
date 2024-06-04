@@ -19,9 +19,9 @@
 <input type="checkbox" id="dark-mode-checkbox" class="dark-mode-checkbox">
 <label for="dark-mode-checkbox" class="dark-mode-toggle">Dark Mode</label>
 
-<h1>Articles</h1>
-
 <div class="container">
+    <h1>Articles</h1>
+   
     @using (Html.BeginForm("Index", "Home", FormMethod.Get))
     {
         <select id="topic" name="topic" class="form-select">
@@ -57,4 +57,3 @@
         }
     </div>
 </div>
-
