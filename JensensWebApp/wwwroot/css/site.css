@@ -34,14 +34,14 @@ body {
 }
 
 h5 {
-    font-size: 9vw;
+    font-size: 6vw;
     text-align: center;
     margin-top: 5vw;
     margin-bottom: 0;
 }
 
 .card-text {
-    font-size: 6vw;
+    font-size: 4vw;
     text-align: center;
 }
 
@@ -49,10 +49,11 @@ h5 {
     display: flex;
     justify-content: center;
     margin-top: 2vw;
-    font-size: 5vw;
+    font-size: 3vw;
 }
-.text-muted{
-    font-size: 4vw;
+.card-text-muted{
+    font-size: 2vw;
+    text-align: center;
 }
 /*navigationbar*/
 .container-fluid {
@@ -296,11 +297,11 @@ form {
     }
 
     #sortBy option {
-    font-size: 3vw;
+    font-size: 2vw;
     }
 
     #topic option {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     .btn {
@@ -316,20 +317,21 @@ form {
     }
     
     .card-body h5 {
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     .card-text {
-        font-size: 4vw;
+        font-size: 2.5vw;
     }
     
     .card-body a{
-        font-size: 3.5vw;
-        margin-top: 1vw; 
+        font-size: 1.7vw;
+        margin-top: .5vw; 
     }
 
-    .text-muted{
-        font-size: 3vw;
+    .card-text-muted{
+        font-size: 1.2vw;
+        margin: 2vw;
     }
     
     .footer-container {
@@ -408,24 +410,28 @@ form {
 
     .card {
         margin-top: 1vw;
-        width: 70vw;
+        width: 85vw;
+        padding-left:1vw;
+        padding-right: 1vw;
     }
 
     .card-body h5 {
-        font-size: 5.3vw;
+        font-size: 3.7vw;
     }
 
     .card-text {
-        font-size: 3.5vw;
+        font-size: 2.2vw;
     }
 
     .card-body a {
-        font-size: 3vw;
-        margin-top: 1vw;
+        font-size: 1.5vw;
+        margin-top: .7vw;
     }
 
-    .text-muted {
-        font-size: 2vw;
+    .card-text-muted {
+        font-size: 1vw;
+        margin-top: 0.5vw;
+        margin-bottom: 1.5vw;
     }
 
     .footer-container {
@@ -435,7 +441,12 @@ form {
 
     .image {
         display: flex;
-        right: 2vw;
+        right: 0;
+        bottom: 0;
+    }
+    .image img {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -507,31 +518,33 @@ form {
     
     .card {
         margin-top: 0.5vw;
-        width: 70vw;
+        width: 85vw;
         padding-left: 2vw;
         padding-right: 2vw;
     }
     
     .card-body h5 {
-        font-size: 3vw;
+        font-size: 2.5vw;
         margin-top: 2vw;
         margin-bottom: 2vw;
     }
 
     .card-text {
-        font-size: 1.8vw;
+        font-size: 1.3vw;
         margin-top: 0;
         margin-bottom: 1vw;
     }
     
     .card-body a{
         margin-bottom: 0.5vw;
-        font-size: 1.5vw;
+        font-size: 1vw;
         margin-top: 0.5vw; 
     }
 
-    .text-muted{
-        font-size: 1vw;
+    .card-text-muted{
+        font-size: .8vw;
+        margin-top: 0.5vw;
+        margin-bottom: 2vw;
     }
     
     .footer-container {
@@ -545,13 +558,13 @@ form {
 
     .image {
         display: flex;
-        right: 1vw;
-        bottom: 2vh;
+        right: 0;
+        bottom: 0;
     }
 
     .image img {
-        width: 40px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -635,7 +648,7 @@ form {
 
     .card {
         margin-top: 0.5vw;
-        width: 75vw;
+        width: 80vw;
         padding-left: 1vw;
         padding-right: 1vw;
     }
@@ -658,8 +671,10 @@ form {
         margin-top: 0.5vw; 
     }
 
-    .text-muted{
-        font-size: .5vw;
+    .card-text-muted{
+        font-size: .8vw;
+        margin-top: .5vw; 
+        margin-bottom: 1vw;
     }
     
     .footer-container {
@@ -678,7 +693,7 @@ form {
     }
 
     .image img {
-        width: 40px;
+        width: 50px;
         height: 50px;
     }
 }
