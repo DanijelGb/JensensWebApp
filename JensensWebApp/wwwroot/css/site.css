@@ -211,7 +211,7 @@ form {
   color: var(--text-color);
   cursor: pointer;
   position: relative;
-  top: 2rem;
+  top: 7rem;
   margin: 2rem;
   padding: 0.5rem 1rem;
 }
@@ -251,4 +251,16 @@ border-color: var(--article-border-color);
 .dark-mode-checkbox:checked ~ .dark-mode-toggle {
   background-color: #333; 
   color: #fff;
+}
+
+/* Light mode */
+.light-mode {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark mode */
+.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
 }
