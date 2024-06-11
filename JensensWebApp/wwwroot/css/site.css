@@ -235,6 +235,8 @@ form {
     display: none;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .image img {
@@ -245,6 +247,10 @@ form {
 
 .image:hover img {
     transform: translateY(-5px);
+}
+
+.image.visible{
+    opacity: 1;
 }
 
 /* Styles for small screens*/
