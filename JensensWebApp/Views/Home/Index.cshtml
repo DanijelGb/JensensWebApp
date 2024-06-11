@@ -45,7 +45,12 @@
 		}
 	</div>
 
-    <div class="cards-container">
+    <div id="cards-container">
+        <!-- Articles will be inserted here -->
+    </div>
+    <button id="loadMoreButton">Load more</button>
+
+    <div id="allCards" class="cards-container-hidden">
         @foreach (var article in Model)
         {
             <div class="card-container">
