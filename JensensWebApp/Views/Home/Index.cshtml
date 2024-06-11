@@ -48,9 +48,9 @@
     <div id="cards-container">
         <!-- Articles will be inserted here -->
     </div>
-    <button id="loadMoreButton">Load more</button>
+    <button id="loadMoreButton">Load more</button> <!-- button for moving more cards to the visible div -->
 
-    <div id="allCards" class="cards-container-hidden">
+    <div id="allCards" class="cards-container-hidden"> <!-- hidden div to load all the articles in when loading the page -->
         @foreach (var article in Model)
         {
             <div class="card-container">
