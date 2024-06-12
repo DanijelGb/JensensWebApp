@@ -7,6 +7,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    width: 100%;
+}
 /*cards*/
 .cards-container {
     padding-top: 5vw;
@@ -212,7 +215,49 @@ form {
     margin-left: auto;
     margin-right: 2vw;
 }
+/* Modal */
+.modal {
+    display:block;
+    position: fixed;
+    width : 80%;
+    left: 10%;
+    top: 20%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .3);
+}
 
+.modal-content {
+    background-color: rgba(170, 170, 170, 0.98);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    padding: 3vw;
+    border: .5vw solid rgba(0, 0, 0, .5);
+    width: 80%;
+    position: relative;
+    font-size: 4vw;
+}
+
+.closeBtn {
+    color: rgba(0, 0, 0, 1);
+    font-size: 7vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1em;
+    height: 1em;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 /*footer*/
 .footer-container {
     margin-top: 4vw;
