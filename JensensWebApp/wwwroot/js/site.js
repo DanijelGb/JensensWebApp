@@ -68,26 +68,26 @@ class ArticleCounter{
 
 class ArticleSummarizor{
   constructor (button, modalContent){
-    this.url = button.nextElementSibling.href;
-    this.title = button.parentElement.children[0].innerText
+    this.url = button.nextElementSibling.href;              // gets the url related to the button clicked.
+    this.title = button.parentElement.children[0].innerText // gets the title of said article
     this.modalContent = modalContent; 
-    this.h3 = this.modalContent.children[0];
-    this.p = this.modalContent.children[1];
+    this.h3 = this.modalContent.children[0];                // selects the h3-element       
+    this.p = this.modalContent.children[1];                 // selects the p-element
     this.summary = "";
 
-    this.UpdateModal();
+    this.UpdateModal();                                     // runs the function for updating modal-content.
   }
 
   async UpdateModal() {
     this.h3.innerText = this.title;
-    this.p.innerText = await this.Summarize(); 
+    this.p.innerText = await this.Summarize();              // Runs the function for sending a request to the api
   }
 
-  async Summarize() {
+  async Summarize() {                                       // running asynchronously so the program waits for the fetch to complete. 
     const formdata = new FormData();
-    formdata.append("key", "51c166ec7dcc88cb16db8eb5489dbf95");
-    formdata.append("url", this.url);
-    formdata.append("sentences", 5);
+    formdata.append("key", "51c166ec7dcc88cb16db8eb5489dbf95");   // User-key needed to communicate with the api, there is a cost for each word and a limit on how many free ones you get each month.
+    formdata.append("url", this.url);                             // The url that should get summarized
+    formdata.append("sentences", 5);                              // number of sentences in summary.
 
     const requestOptions = {
       method: "POST",
@@ -95,12 +95,12 @@ class ArticleSummarizor{
       redirect: "follow"
     };
 
-    return fetch("https://api.meaningcloud.com/summarization-1.0", requestOptions)
+    return fetch("https://api.meaningcloud.com/summarization-1.0", requestOptions)  // API url
       .then(response => (
          response.json()
       ))
       .then(data => {
-        return data.summary
+        return data.summary                                     // returns the summary-property of the response.json
       })
       .catch(error => console.log("error", error));
   }
@@ -108,9 +108,9 @@ class ArticleSummarizor{
 
 class ModalOpener {
     constructor(){
-    this.modal = document.getElementById("summary-modal");
-    this.btns = document.querySelectorAll(".summarizeBtn");
-    this.span = document.getElementsByClassName("closeBtn")[0];
+    this.modal = document.getElementById("summary-modal");        // Adds listeners to all the summarize-buttons. Also adds listener to the close-button.
+    this.btns = document.querySelectorAll(".summarizeBtn");       // The class handles opening and closing of the modal. You can close it by either
+    this.span = document.getElementsByClassName("closeBtn")[0];   // clicking the button or anywhere on the screen outside of the modal.
     this.modalContent = this.modal.querySelector(".modal-content");
 
     this.init();
@@ -118,7 +118,7 @@ class ModalOpener {
 
     init() {
       this.btns.forEach(button => {
-        button.addEventListener("click", (event) => {
+        button.addEventListener("click", (event) => {   // Adds listener to all buttons that should open the modal.
           event.stopPropagation();
           new ArticleSummarizor(button, this.modalContent);
           this.OpenModal();
@@ -131,7 +131,7 @@ class ModalOpener {
       });
 
       document.addEventListener("click", (event) => {
-        if(this.modal.style.display === "block" && !this.modalContent.contains(event.target) && event.target !== this.modal) {
+        if(this.modal.style.display === "block" && !this.modalContent.contains(event.target) && event.target !== this.modal) {  // enables closing the modal when clicking on the screen
           event.stopPropagation();
           this.CloseModal();
         }
