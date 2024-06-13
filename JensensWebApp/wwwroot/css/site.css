@@ -60,7 +60,7 @@ h5 {
     font-size: 3vw;
 }
 
-#summarize{
+.summarizeBtn{
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -266,7 +266,7 @@ form {
 
 /* Modal */
 .modal {
-    display:block;
+    display: none;
     position: fixed;
     width : 80%;
     left: 10%;
@@ -444,7 +444,7 @@ form {
         margin-top: .5vw; 
     }
 
-    #summarize{
+    .summarize.Btn{
         font-size: 1.7vw;
         margin-top: .5vw;
         margin-bottom: 1vw;
@@ -565,7 +565,7 @@ form {
         margin-top: .7vw;
     }
     
-    #summarize{
+    .summarizeBtn{
         font-size: 1.5vw;
         margin-top: .7vw;
         margin-bottom: .7vw;
@@ -715,14 +715,14 @@ form {
         text-decoration: underline;
     }
     
-    #summarize{
+    .summarizeBtn{
         font-size: 1vw;
         margin-top: .5vw;
         margin-bottom: .5vw;
         text-decoration: none;
     }
 
-    #summarize:hover {
+    .summarizeBtn:hover {
         text-decoration: underline;
     }
 
@@ -907,14 +907,14 @@ form {
         text-decoration: underline;
     }
     
-    #summarize{
+    .summarizeBtn{
         font-size: 0.8vw;
         margin-top: .5vw;
         margin-bottom: .5vw;
         text-decoration: none;
     }
 
-    #summarize:hover {
+    .summarizeBtn:hover {
         text-decoration: underline;
     }
 
