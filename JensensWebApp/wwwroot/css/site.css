@@ -8,8 +8,13 @@ body {
 }
 
 /*cards*/
+
 .cards-container {
     padding-top: 5vw;
+}
+
+.cards-container-hidden {
+    display: none;
 }
 
 .card-container {
@@ -202,6 +207,15 @@ form {
     margin-right: 2vw;
 }
 
+/*Load more button*/
+#loadMoreButton {
+    text-decoration: underline;
+    display: block;
+    border: none;
+    background: none;
+    margin: 2vh auto;
+}
+
 /*footer*/
 .footer-container {
     margin-top: 4vw;
@@ -340,6 +354,9 @@ form {
         margin: 2vw;
     }
     
+    #loadMoreButton {
+        text-decoration: underline;
+    }
     .footer-container {
         font-size: 4vw;
         padding: 3vw;
@@ -552,6 +569,13 @@ form {
         margin-top: 0.5vw;
         margin-bottom: 2vw;
     }
+
+    #loadMoreButton {
+        text-decoration: none;
+    }
+    #loadMoreButton:hover {
+        text-decoration: underline;
+    }
     
     .footer-container {
         font-size: 2vw;
@@ -682,6 +706,14 @@ form {
         margin-top: .5vw; 
         margin-bottom: 1vw;
     }
+
+    #loadMoreButton {
+        text-decoration: none;
+    }
+    #loadMoreButton:hover {
+        text-decoration: underline;
+    }
+    
     
     .footer-container {
         font-size: 1vw;
