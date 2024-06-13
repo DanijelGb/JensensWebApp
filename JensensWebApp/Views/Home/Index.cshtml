@@ -21,28 +21,33 @@
 
 <div class="container">
 	<div class="form-container">
-		@using (Html.BeginForm("Index", "Home", FormMethod.Get))
-		{
-			<div id="select-topic-container">
-				<select id="topic" name="topic" class="form-select">
-					<option value="">Select a topic:</option>
-					@foreach (var topic in topicDisplayNames)
-					{
-						<option value="@topic.Key">@topic.Value</option>
-					}
-				</select>
-			</div>
+        <div class="form-div">
+    		@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+		    {
+			    <div id="select-topic-container">
+				    <select id="topic" name="topic" class="form-select">
+					    <option value="">Select a topic:</option>
+					    @foreach (var topic in topicDisplayNames)
+					    {
+						    <option value="@topic.Key">@topic.Value</option>
+					    }
+				    </select>
+			    </div>
 
-			<div id="select-sort-container">
-				<select id="sortBy" name="sortBy" class="form-select">
-					<option value="">Sort by:</option>
-					<option value="newest">Newest to Oldest</option>
-					<option value="oldest">Oldest to Newest</option>
-				</select>
-			</div>
+    			<div id="select-sort-container">
+				    <select id="sortBy" name="sortBy" class="form-select">
+					    <option value="">Sort by:</option>
+					    <option value="newest">Newest to Oldest</option>
+					    <option value="oldest">Oldest to Newest</option>
+			    	</select>
+			    </div>
 
-			<button type="submit" class="btn btn-primary">Filter</button>
-		}
+			    <button id="filter-button" type="submit" class="btn btn-primary">Filter</button>
+		    }
+        </div>
+        <div class="article-count-container">
+            <p id="article-count-text" class="card-text">Loading articles... </p> <!-- Element to display article-count with a default value of Loading articles... -->
+        </div>
 	</div>
 
     <div id="cards-container">
