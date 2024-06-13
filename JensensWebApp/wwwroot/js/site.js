@@ -66,17 +66,29 @@ class ArticleCounter{
 
 }
 
+class ArticleSummarizor{
+  constructor (button, modalContent){
+    this.url = button.nextElementSibling.href;
+    this.title = button.parentElement.children[0].innerText
+    this.modalContent = modalContent; 
+    this.h3 = this.modalContent.children[0];
+    this.p = this.modalContent.children[1];
+
+    this.Summarize();    
+  }
+
+  Summarize() {
+    this.h3.innerText = this.title;
+    this.p.innerText = this.url;
+  }
+}
+
 class ModalOpener {
     constructor(){
     this.modal = document.getElementById("summary-modal");
     this.btns = document.querySelectorAll(".summarizeBtn");
     this.span = document.getElementsByClassName("closeBtn")[0];
     this.modalContent = this.modal.querySelector(".modal-content");
-
-        console.log("Modal:", this.modal);
-        console.log("Buttons:", this.btns);
-        console.log("Close button:", this.span);
-        console.log("Modal content:", this.modalContent);
 
     this.init();
     }
@@ -85,6 +97,7 @@ class ModalOpener {
       this.btns.forEach(button => {
         button.addEventListener("click", (event) => {
           event.stopPropagation();
+          new ArticleSummarizor(button, this.modalContent);
           this.OpenModal();
         });
       });
@@ -108,12 +121,10 @@ class ModalOpener {
 
     OpenModal() {
         this.modal.style.display = "block";
-        console.log("Opened modal");
     };
 
     CloseModal() {
         this.modal.style.display = "none";
-        console.log("Closed modal");
     }
     
 }
@@ -123,5 +134,4 @@ document.addEventListener('DOMContentLoaded', () => {
   new CardLoader("#allCards .card-container", "cards-container", "loadMoreButton", 10); // Creates an instance of the class when the dom content has loaded.
   new ArticleCounter("#allCards .card-container", "#cards-container .card-container", "filter-button", "article-count-text"); // Creates an instance of the class when the dom content has loaded.
   new ModalOpener();
-  console.log("new modal and stuff");
 });
