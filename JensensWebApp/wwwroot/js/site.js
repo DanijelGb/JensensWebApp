@@ -73,13 +73,36 @@ class ArticleSummarizor{
     this.modalContent = modalContent; 
     this.h3 = this.modalContent.children[0];
     this.p = this.modalContent.children[1];
+    this.summary = "";
 
-    this.Summarize();    
+    this.UpdateModal();
   }
 
-  Summarize() {
+  async UpdateModal() {
     this.h3.innerText = this.title;
-    this.p.innerText = this.url;
+    this.p.innerText = await this.Summarize(); 
+  }
+
+  async Summarize() {
+    const formdata = new FormData();
+    formdata.append("key", "51c166ec7dcc88cb16db8eb5489dbf95");
+    formdata.append("url", this.url);
+    formdata.append("sentences", 5);
+
+    const requestOptions = {
+      method: "POST",
+      body: formdata,
+      redirect: "follow"
+    };
+
+    return fetch("https://api.meaningcloud.com/summarization-1.0", requestOptions)
+      .then(response => (
+         response.json()
+      ))
+      .then(data => {
+        return data.summary
+      })
+      .catch(error => console.log("error", error));
   }
 }
 
