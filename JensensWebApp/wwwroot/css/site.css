@@ -7,6 +7,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    width: 100%;
+}
 /*cards*/
 
 .cards-container {
@@ -61,7 +64,17 @@ h5 {
     font-size: 3vw;
 }
 
-.card-text-muted {
+.summarizeBtn{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    border: none;
+    margin-top: 1vw;
+    text-decoration: underline;
+    font-size: 3vw;
+}
+.card-text-muted{
     font-size: 2vw;
     text-align: center;
     margin-top: 2vw; 
@@ -311,6 +324,57 @@ form {
     margin: 2vh auto;
 }
 
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    width : 80%;
+    left: 10%;
+    top: 20%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.modal-content {
+    background-color: rgba(170, 170, 170, 0.98);
+    margin-left: auto;
+    margin-right: 2vw;
+
+}
+
+.total-articles{
+    text-align: bottom;
+    margin-top: 6vw;
+}
+
+/*Load more button*/
+#loadMoreButton {
+    text-decoration: underline;
+    display: block;
+    border: none;
+    background: none;
+    margin: 2vh auto;
+}
+
+.closeBtn {
+    color: rgba(0, 0, 0, 1);
+    font-size: 6vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.85em;
+    height: 0.85em;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 /*footer*/
 .footer-container {
     margin-top: 4vw;
@@ -374,6 +438,7 @@ form {
         font-size: 4vw;
     }
 
+
     .article-pic {
         margin-bottom: 4vw;
     }
@@ -424,6 +489,11 @@ form {
     .form-div::after{
         border-bottom: 0.3vw solid rgba(255, 254, 254, 0.2);
     }
+
+    /* Modal */
+    .modal-content {
+        font-size: 2.5vw;
+    }
     
     .card {
         margin-top: 1vw;
@@ -441,6 +511,12 @@ form {
     .card-body a{
         font-size: 1.7vw;
         margin-top: .5vw; 
+    }
+
+    .summarize.Btn{
+        font-size: 1.7vw;
+        margin-top: .5vw;
+        margin-bottom: 1vw;
     }
 
     .card-text-muted{
@@ -529,6 +605,15 @@ form {
         width: 96%;
     }
 
+    /* Modal */
+    .modal-content {
+        font-size: 2.2vw;
+    }
+
+    .closeBtn {
+        font-size: 5vw;
+    }
+
     .card {
         margin-top: 1vw;
         width: 85vw;
@@ -547,6 +632,12 @@ form {
     .card-body a {
         font-size: 1.5vw;
         margin-top: .7vw;
+    }
+    
+    .summarizeBtn{
+        font-size: 1.5vw;
+        margin-top: .7vw;
+        margin-bottom: .7vw;
     }
 
     .card-text-muted {
@@ -642,7 +733,27 @@ form {
         margin-left: auto;
         margin-right: 7vw;
     }
-    
+
+    /* Modal */
+    .modal {
+        top: 30%;
+    }
+
+    .modal-content {
+        font-size: 1.3vw;
+        width: 80%;
+        margin-top: 2.5vw;
+        margin-bottom: 2.5vw;
+        padding: 3.5vw;
+    }
+
+    .closeBtn {
+        color: rgba(255, 255, 255, 1);
+        font-size: 3vw;
+        width: 1em;
+        height: 1em;
+    }
+
     .card {
         margin-top: 0.5vw;
         width: 85vw;
@@ -666,6 +777,22 @@ form {
         margin-bottom: 0.5vw;
         font-size: 1vw;
         margin-top: 0.5vw; 
+        text-decoration: none;
+    }
+
+    .card-body a:hover {
+        text-decoration: underline;
+    }
+    
+    .summarizeBtn{
+        font-size: 1vw;
+        margin-top: .5vw;
+        margin-bottom: .5vw;
+        text-decoration: none;
+    }
+
+    .summarizeBtn:hover {
+        text-decoration: underline;
     }
 
     .card-text-muted{
@@ -753,8 +880,8 @@ form {
     }
 
     #select-topic-container {
-        margin-left: 2vw;
-        width: 27%;
+        margin-left: 4vw;
+        width: 15%;
     }
 
     #select-sort-container {
@@ -794,9 +921,36 @@ form {
         margin-left: auto;
         margin-right: 7vw;
     }
-    
+
+    /* Modal */
+    .modal {
+        top: 30%;
+    }
+
+    .modal-content {
+        font-size: 1.3vw;
+        width: 85%;
+        margin-top: 2.5vw;
+        margin-bottom: 2.5vw;
+        padding: 2.5vw;
+        border: .2vw solid rgba(0, 0, 0, .5);
+    }
+    .modal-content h3{
+        margin-top: 0;
+    }
+    .modal-content p{
+        margin-bottom: 0;
+    }
+
+    .closeBtn {
+        color: rgba(255, 255, 255, 1);
+        font-size: 2vw;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
     .cards-container{
-        padding-top: 2vw;
+        margin-top: 2vw;
     }
 
     .card {
@@ -822,6 +976,22 @@ form {
         margin-bottom: 0.5vw;
         font-size: .8vw;
         margin-top: 0.5vw; 
+        text-decoration: none;
+    }
+
+    .card-body a:hover {
+        text-decoration: underline;
+    }
+    
+    .summarizeBtn{
+        font-size: 0.8vw;
+        margin-top: .5vw;
+        margin-bottom: .5vw;
+        text-decoration: none;
+    }
+
+    .summarizeBtn:hover {
+        text-decoration: underline;
     }
 
     .card-text-muted{
@@ -836,7 +1006,6 @@ form {
     #loadMoreButton:hover {
         text-decoration: underline;
     }
-    
     
     .footer-container {
         font-size: 1vw;

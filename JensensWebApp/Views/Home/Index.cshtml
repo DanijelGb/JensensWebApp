@@ -65,12 +65,20 @@
         </div>
     </div>
 
-    <div class="cards-container" id="cards-container">
+    <div id="summary-modal" class="modal">
+            <span class="closeBtn">&times;</span>
+        <div class="modal-content">
+            <h3>Loading...</h3>
+            <p></p>
+        </div>
+    </div>
+
+    <div id="cards-container">
         <!-- Articles will be inserted here -->
     </div>
-    <button id="loadMoreButton">Load more</button>
+    <button id="loadMoreButton">Load more</button> <!-- button for moving more cards to the visible div -->
 
-    <div id="allCards" class="cards-container-hidden">
+    <div id="allCards" class="cards-container-hidden"> <!-- hidden div to load all the articles in when loading the page -->
         @foreach (var article in Model)
         {
             <div class="card-container" data-topic="@article.Topic.FirstOrDefault()">
@@ -78,6 +86,7 @@
                     <div class="card-body">
                         <h5 class="card-title">@article.Title</h5>
                         <p class="card-text">@article.Summary</p>
+                        <button class="summarizeBtn">Summarize with AI</button>
                         <a href="@article.Link" class="card-link" target="_blank">Read More</a>
                         <p class="card-text-muted"><small class="text-muted">@article.Published.ToString("yyyy-MM-dd HH:mm:ss")</small></p>
                     </div>
