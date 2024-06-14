@@ -288,6 +288,28 @@ form {
     font-size: 4vw;
 }
 
+.modal-content h3, .modal-content p {
+    display: none;
+}
+
+.loader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, rgba(0, 0, 0, .5) 94%, rgba(0, 0, 0, 0)) top/4px 4px no-repeat,
+     conic-gradient(rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, .5));
+    -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 4px), rgba(0, 0, 0, 1) 0);
+    mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 4px), rgba(0, 0, 0, 1) 0);
+    animation: l13 1s infinite linear;
+}
+
+@keyframes l13 {
+    100% {transform: rotate(1turn); }
+}
+
 .closeBtn {
     color: rgba(0, 0, 0, 1);
     font-size: 6vw;
