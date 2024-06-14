@@ -315,15 +315,6 @@ form {
     margin-top: 6vw;
 }
 
-/*Load more button*/
-#loadMoreButton {
-    text-decoration: underline;
-    display: block;
-    border: none;
-    background: none;
-    margin: 2vh auto;
-}
-
 /* Modal */
 .modal {
     display: none;
@@ -340,11 +331,6 @@ form {
     margin-left: auto;
     margin-right: 2vw;
 
-}
-
-.total-articles{
-    text-align: bottom;
-    margin-top: 6vw;
 }
 
 /*Load more button*/

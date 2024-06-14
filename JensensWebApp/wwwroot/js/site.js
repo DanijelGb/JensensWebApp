@@ -155,7 +155,6 @@ class CardLoader {
 
         this.loadMoreButton.addEventListener("click", () => this.loadCards());
         this.loadCards();
-        this.updateArticleCount();
     }
 
     loadCards() {
@@ -168,7 +167,6 @@ class CardLoader {
         if (this.currentIndex >= this.allCards.length) {
             this.loadMoreButton.style.display = "none";
         }
-        this.updateArticleCount();
     }
 }
 
@@ -224,6 +222,7 @@ class ModalOpener {
 
     init() {
       this.btns.forEach(button => {
+        console.log(button);
         button.addEventListener("click", (event) => {   // Adds listener to all buttons that should open the modal.
           event.stopPropagation();
           new ArticleSummarizor(button, this.modalContent);
@@ -261,5 +260,6 @@ class ModalOpener {
 document.addEventListener('DOMContentLoaded', () => {
     new ScrollToTop('scroll-to-top');
     new CardLoader("#allCards .card-container", "cards-container", "loadMoreButton", 10);
+    console.log("loading...");
     new ModalOpener();
 });
