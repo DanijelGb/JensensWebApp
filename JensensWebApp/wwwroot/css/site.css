@@ -7,11 +7,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*cards*/
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 5vw;
+}
+
+.cards-container-hidden {
+    display: none;
 }
 
 .card-container {
@@ -126,8 +132,24 @@ h5 {
 .form-container {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     transition: padding-bottom 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    margin-left:auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+.article-count-container{
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    width: max-content;
+    height: max-content;
+}
+
+#article-count-text{
+    margin:0;
 }
 
 form {
@@ -270,6 +292,25 @@ form {
     background-color: rgb(154, 154, 154);
 }
 
+#article-count{
+    margin-right: 2vw;
+
+}
+
+.total-articles{
+    text-align: bottom;
+    margin-top: 6vw;
+}
+
+/*Load more button*/
+#loadMoreButton {
+    text-decoration: underline;
+    display: block;
+    border: none;
+    background: none;
+    margin: 2vh auto;
+}
+
 /*footer*/
 .footer-container {
     margin-top: 4vw;
@@ -304,7 +345,7 @@ form {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.7s;
+    transition: opacity 0.5s;
 }
 
 .image img {
@@ -332,14 +373,9 @@ form {
     .navbar-brand{
         font-size: 4vw;
     }
-    
+
     .article-pic {
         margin-bottom: 4vw;
-    }
-
-    form {
-        padding-top: 1vw;
-        padding-bottom: 1vw;
     }
 
     #select-topic-container {
@@ -384,6 +420,10 @@ form {
         margin-left: auto;
         margin-right: 5vw;
     }
+
+    .form-div::after{
+        border-bottom: 0.3vw solid rgba(255, 254, 254, 0.2);
+    }
     
     .card {
         margin-top: 1vw;
@@ -408,6 +448,9 @@ form {
         margin: 2vw;
     }
     
+    #loadMoreButton {
+        text-decoration: underline;
+    }
     .footer-container {
         font-size: 4vw;
         padding: 3vw;
@@ -433,10 +476,8 @@ form {
         height: auto;
     }
 
-    form {
-        padding-top: 0.9vw;
-        padding-bottom: 0.9vw;
-        width: 80vw;
+    .form-container{
+        width: 95%;
     }
 
     #select-topic-container {
@@ -480,6 +521,12 @@ form {
         font-size: 2.5vw;
         margin-left: auto;
         margin-right: 5vw;
+    }
+
+    .form-div::after{
+        border-bottom: 0.3vw solid rgba(255, 254, 254, 0.2);
+        left: 2%;
+        width: 96%;
     }
 
     .card {
@@ -541,24 +588,30 @@ form {
         height: auto;
     }
 
-    form {
-        padding-top: 0.9vw;
-        padding-bottom: 0.9vw;
-        width: 60vw;
+    .form-container{
+        width: 75%;
+    }
+
+    .form-div::after{
+        border-bottom: 0.3vw solid rgba(255, 254, 254, 0.2);
+        left: 2%;
+        width: 96%;
     }
 
     #select-topic-container {
-        margin-left: 2vw;
-        width: 28%;
+        margin-left: 7vw;
+        width: 22%;
     }
 
     #select-sort-container {
         margin-left: 1vw;
-        width: 18%;
+        width: 15%;
     }
 
     #topic {
         font-size: 2vw;
+        width: 100%;
+        padding-right: 0;
     }
 
     #select-topic-container::after {
@@ -587,7 +640,7 @@ form {
         padding: 1.5vw;
         font-size: 1.5vw;
         margin-left: auto;
-        margin-right: 2vw;
+        margin-right: 7vw;
     }
     
     .card {
@@ -619,6 +672,13 @@ form {
         font-size: .8vw;
         margin-top: 0.5vw;
         margin-bottom: 2vw;
+    }
+
+    #loadMoreButton {
+        text-decoration: none;
+    }
+    #loadMoreButton:hover {
+        text-decoration: underline;
     }
     
     .footer-container {
@@ -666,21 +726,40 @@ form {
         height: auto;
     }
 
+    .form-container{
+        width: 60%;
+    }
+
+    .form-div{
+        margin-top: 1vw;
+    }
+
+    .article-count-container{
+        margin-bottom: 1vw;
+        margin-top: 0.5vw;
+    }
+    
+    .form-div::after{
+        border-bottom: 0.2vw solid rgba(255, 254, 254, 0.2);
+        left: 2%;
+        width: 96%;
+    }
+    
     form {
-        padding-top: 1.4vw;
-        padding-bottom: 1.4vw;
+        padding-top: 2vw;
+        padding-bottom: 5vw;
         width: 30vw;
         gap: 2vw;
     }
 
     #select-topic-container {
         margin-left: 2vw;
-        width: 70%;
+        width: 27%;
     }
 
     #select-sort-container {
         margin-left: 0.5vw;
-        width: 18%;
+        width: 11%;
     }
 
     #topic {
@@ -713,7 +792,7 @@ form {
         padding: .5vw;
         font-size: 1vw;
         margin-left: auto;
-        margin-right: 1vw;
+        margin-right: 7vw;
     }
     
     .cards-container{
@@ -750,6 +829,14 @@ form {
         margin-top: .5vw; 
         margin-bottom: 1vw;
     }
+
+    #loadMoreButton {
+        text-decoration: none;
+    }
+    #loadMoreButton:hover {
+        text-decoration: underline;
+    }
+    
     
     .footer-container {
         font-size: 1vw;

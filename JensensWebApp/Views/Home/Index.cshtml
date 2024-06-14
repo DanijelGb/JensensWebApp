@@ -25,41 +25,52 @@
 
 <div class="container">
     <div class="form-container">
-        @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { id = "filterForm" }))
-        {
-            <div class="dropdown-container">
-                <div id="select-topic-container" class="dropdown">
-                    <select id="topic" name="topic" class="form-select" title="Select topic">
-                        <option value="">Select a topic:</option>
-                        @foreach (var topic in topicDisplayNames)
-                        {
-                            <option value="@topic.Key">@topic.Value</option>
-                        }
+        <div class="form-div">
+            @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { id = "filterForm" }))
+            {
+                <div class="dropdown-container">
+                    <div id="select-topic-container" class="dropdown">
+                        <select id="topic" name="topic" class="form-select" title="Select topic">
+                            <option value="">Select a topic:</option>
+                            @foreach (var topic in topicDisplayNames)
+                            {
+                                <option value="@topic.Key">@topic.Value</option>
+                            }
+                        </select>
+                        <ul class="dropdown-options">
+                            @foreach (var topic in topicDisplayNames)
+                            {
+                                <li><a href="#" data-value="@topic.Key">@topic.Value</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="select-sort-container" class="dropdown">
+                    <select id="sortBy" name="sortBy" class="form-select">
+                        <option value="">Sort by:</option>
+                        <option value="newest">Newest to Oldest</option>
+                        <option value="oldest">Oldest to Newest</option>
                     </select>
                     <ul class="dropdown-options">
-                        @foreach (var topic in topicDisplayNames)
-                        {
-                            <li><a href="#" data-value="@topic.Key">@topic.Value</a></li>
-                        }
+                        <li><a href="#" data-value="newest">Newest to Oldest</a></li>
+                        <li><a href="#" data-value="oldest">Oldest to Newest</a></li>
                     </ul>
                 </div>
-            </div>
-
-            <div id="select-sort-container" class="dropdown">
-                <select id="sortBy" name="sortBy" class="form-select">
-                    <option value="">Sort by:</option>
-                    <option value="newest">Newest to Oldest</option>
-                    <option value="oldest">Oldest to Newest</option>
-                </select>
-                <ul class="dropdown-options">
-                    <li><a href="#" data-value="newest">Newest to Oldest</a></li>
-                    <li><a href="#" data-value="oldest">Oldest to Newest</a></li>
-                </ul>
-            </div>
-        }
+                <button type="button" id="resetButton" class="btn btn-secondary">Reset</button>
+                <div class="total-articles"> 
+                    <p id="displayedArticlesText" class="form-text">Total Articles: <span id="displayedArticlesCount"></span></p>
+                </div>
+            }
+        </div>
     </div>
 
-    <div class="cards-container">
+    <div class="cards-container" id="cards-container">
+        <!-- Articles will be inserted here -->
+    </div>
+    <button id="loadMoreButton">Load more</button>
+
+    <div id="allCards" class="cards-container-hidden">
         @foreach (var article in Model)
         {
             <div class="card-container" data-topic="@article.Topic.FirstOrDefault()">
