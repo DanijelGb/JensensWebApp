@@ -81,7 +81,7 @@ class ArticleSummarizor{
 
   async UpdateModal() {
     this.h3.innerText = this.title;
-    this.p.innerText = await this.Summarize();              // Runs the function for sending a request to the api
+    this.p.innerText = this.FormatSummary(await this.Summarize());              // Runs the function for sending a request to the api
     this.loader.style.display = "none";
     this.h3.style.display = "block";
     this.p.style.display = "block";
@@ -107,6 +107,11 @@ class ArticleSummarizor{
         return data.summary                                     // returns the summary-property of the response.json
       })
       .catch(error => console.log("error", error));
+  }
+
+  FormatSummary(summary) {
+    const reg = /(\shttps?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)/;
+    return summary.replace(reg, "");
   }
 }
 
