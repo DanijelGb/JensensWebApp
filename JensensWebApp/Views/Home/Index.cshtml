@@ -16,14 +16,12 @@
     };
 }
 
-    <h1>Articles</h1>
+<h1>Articles</h1>
 
 <div class="container">
-     
-   
     @using (Html.BeginForm("Index", "Home", FormMethod.Get))
     {
-        <select id="topic" name="topic" class="form-select">
+        <select id="topic" name="topic" class="form-select white-text-dark-mode">
             <option value="">Select a topic:</option>
             @foreach (var topic in topicDisplayNames)
             {
@@ -31,14 +29,13 @@
             }
         </select>
 
-        <select id="sortBy" name="sortBy" class="form-select">
+        <select id="sortBy" name="sortBy" class="form-select white-text-dark-mode">
             <option value="">Sort by:</option>
             <option value="newest">Newest to Oldest</option>
             <option value="oldest">Oldest to Newest</option>
         </select>
 
-        <button type="submit" class="btn btn-primary">Filter</button>
-    }
+            <button type="submit" class="btn btn-primary">Filter</button>    }
 
     <div class="cards-container">
         @foreach (var article in Model)

@@ -1,14 +1,15 @@
-body.dark-mode {
-  background-color: #1a1a1a;
-  --text-color: #ffffff;
-  --link-color: #9ecfff;
-  --link-hover-color: #68aee8;
-  --article-background-color: #2a2a2a;
-  --article-border-color: #3e3e3e;
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --article-background-color: #f8f9fa;
+  --article-border-color: #e9ecef;
 }
 
-/* Background */
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
   background-image: url("../background.jpg");
   background-attachment: fixed;
   background-size: cover;
@@ -17,7 +18,41 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Cards */
+/* Dark Mode Variables */
+body.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --link-color: #9ecfff;
+  --link-hover-color: #68aee8;
+  --article-background-color: #2a2a2a;
+  --article-border-color: #3e3e3e;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  background-color: var(--article-border-color);
+  border: none;
+  border-radius: 4px;
+  color: var(--text-color);
+  cursor: pointer;
+  position: relative;
+  margin: 2rem;
+  top: 6rem;
+  padding: 0.5rem 1rem;
+}
+
+.dark-mode-checkbox {
+  display: none;
+}
+
 .cards-container {
   padding-top: 15px;
 }
@@ -28,7 +63,7 @@ body {
 }
 
 .card {
-  background-color: rgba(200, 200, 200, 0.85);
+  background-color: var(--article-background-color);
   width: 75vw;
   margin-top: 10px;
   padding: 15px;
@@ -65,7 +100,7 @@ h5 {
   height: 60px;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(200, 200, 200, 0.85);
+  background-color: var(--article-background-color);
   border-radius: 1rem;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
 }
@@ -78,7 +113,7 @@ h5 {
 .navbar-brand {
   font-size: 40px;
   margin-left: 5%;
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -111,7 +146,7 @@ h5 {
 .nav-link {
   font-size: 1.3rem;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 
 .nav-link:hover {
@@ -136,7 +171,7 @@ form {
   width: 500px;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(200, 200, 200, 0.85);
+  background-color: var(--article-background-color);
   border-radius: 1rem;
   margin: 0 auto;
   padding: 0 1rem;
@@ -160,8 +195,8 @@ form {
 
 /* Button */
 .btn {
-  background-color: black;
-  color: rgba(200, 200, 200, 0.85);
+  background-color: rgb(160, 157, 157);
+  color: var(--article-background-color);
   border: none;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
@@ -177,7 +212,7 @@ form {
   height: 80px;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(170, 170, 170, 0.85);
+  background-color: var(--article-background-color);
   border-radius: 1rem;
   font-size: 20px;
   padding: 0 10rem;
@@ -185,7 +220,7 @@ form {
 
 .footer-container a {
   margin-left: 5%;
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -193,74 +228,10 @@ form {
   text-decoration: underline;
 }
 
-/* Light mode */
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --link-color: #007bff;
-  --link-hover-color: #0056b3;
-  --article-background-color: #f8f9fa;
-  --article-border-color: #e9ecef;
-}
-
-/* Dark mode toggle button */
-.dark-mode-toggle {
-  background-color: var(--article-border-color);
-  border: none;
-  border-radius: 4px;
+.white-text-dark-mode {
   color: var(--text-color);
-  cursor: pointer;
-  position: relative;
-  top: 7rem;
-  margin: 2rem;
-  padding: 0.5rem 1rem;
 }
 
-.dark-mode-checkbox {
-  display: none;
-}
-
-.dark-mode-checkbox:checked + .dark-mode-toggle {
-  background-color: #333; 
-  color: #fff; 
-}
-
-.dark-mode-checkbox:checked ~ body {
-  background-color: #222; 
-  color: #fff; 
-}
-
-.dark-mode-checkbox:checked ~ a {
-  color: #9ecfff;
-}
-
-.dark-mode-checkbox:checked ~ a:hover {
-  color: #68aee8; 
-}
-
-.dark-mode-checkbox:checked ~ .card {
-  background-color: #2a2a2a; 
-border-color: var(--article-border-color);
-}
-
-.dark-mode-checkbox:checked ~ .container {
-  background-color: #222;
-  color: #fff;
-}
-
-.dark-mode-checkbox:checked ~ .dark-mode-toggle {
-  background-color: #333; 
-  color: #fff;
-}
-
-/* Light mode */
-.light-mode {
-  --background-color: #ffffff;
-  --text-color: #000000;
-}
-
-/* Dark mode */
-.dark-mode {
-  --background-color: #1a1a1a;
-  --text-color: #ffffff;
+body.dark-mode .white-text-dark-mode {
+  color: #7c7a7a;
 }
