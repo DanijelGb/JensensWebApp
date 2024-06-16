@@ -28,7 +28,7 @@
         <div class="form-div">
             @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { id = "filterForm" }))
             {
-                <div class="dropdown-container">
+                <div class="dropdown-row">
                     <div id="select-topic-container" class="dropdown">
                         <select id="topic" name="topic" class="form-select" title="Select topic">
                             <option value="">Select a topic:</option>
@@ -44,26 +44,31 @@
                             }
                         </ul>
                     </div>
+
+                    <div id="select-sort-container" class="dropdown">
+                        <select id="sortBy" name="sortBy" class="form-select">
+                            <option value="">Sort by:</option>
+                            <option value="newest">Newest to Oldest</option>
+                            <option value="oldest">Oldest to Newest</option>
+                        </select>
+                        <ul class="dropdown-options">
+                            <li><a href="#" data-value="newest">Newest to Oldest</a></li>
+                            <li><a href="#" data-value="oldest">Oldest to Newest</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div id="select-sort-container" class="dropdown">
-                    <select id="sortBy" name="sortBy" class="form-select">
-                        <option value="">Sort by:</option>
-                        <option value="newest">Newest to Oldest</option>
-                        <option value="oldest">Oldest to Newest</option>
-                    </select>
-                    <ul class="dropdown-options">
-                        <li><a href="#" data-value="newest">Newest to Oldest</a></li>
-                        <li><a href="#" data-value="oldest">Oldest to Newest</a></li>
-                    </ul>
-                </div>
                 <button type="button" id="resetButton" class="btn btn-secondary">Reset</button>
-                <div class="total-articles"> 
+
+                <div class="total-articles">
                     <p id="displayedArticlesText" class="form-text">Total Articles: <span id="displayedArticlesCount"></span></p>
                 </div>
             }
         </div>
     </div>
+</div>
+
+
 
     <div id="summary-modal" class="modal">
             <span class="closeBtn">&times;</span>
