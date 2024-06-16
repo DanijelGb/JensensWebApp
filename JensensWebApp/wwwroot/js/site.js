@@ -7,6 +7,8 @@
             this.selectSortBy = document.getElementById("sortBy");
             this.resetButton = document.getElementById("resetButton");
             this.displayedArticlesCount = document.getElementById("displayedArticlesCount");
+            this.allCardContainers = document.querySelectorAll(".card-container");
+
             this.init();
         }
 
@@ -29,38 +31,38 @@
             const applyFilters = () => {
                 const selectedTopic = this.selectTopic.value;
                 const selectedSortBy = this.selectSortBy.value;
-
+    
                 const cardContainers = document.querySelectorAll(".card-container");
-
+    
                 let visibleCount = 0;
-
+    
                 cardContainers.forEach((container) => {
                     const articleTopic = container.dataset.topic;
-
+    
                     if (selectedTopic === "" || articleTopic === selectedTopic) {
-                        container.style.display = "block";
+                        container.style.display = "flex"; 
                         visibleCount++;
                     } else {
                         container.style.display = "none";
                     }
                 });
-
+    
                 if (selectedSortBy) {
                     const sortedContainers = Array.from(cardContainers).sort((a, b) => {
                         const dateA = new Date(a.querySelector(".card-text-muted small").textContent);
                         const dateB = new Date(b.querySelector(".card-text-muted small").textContent);
                         return selectedSortBy === "newest" ? dateB - dateA : dateA - dateB;
                     });
-
+    
                     const parentContainer = document.querySelector("#cards-container");
                     parentContainer.innerHTML = "";
-
+    
                     sortedContainers.forEach((container) => parentContainer.appendChild(container));
                 }
-
+    
                 this.updateArticleCount(visibleCount);
             };
-
+    
             this.selectTopic.addEventListener("change", applyFilters);
             this.selectSortBy.addEventListener("change", applyFilters);
         }
@@ -90,13 +92,12 @@
             this.resetButton.addEventListener("click", () => {
                 this.selectTopic.value = "";
                 this.selectSortBy.value = "";
-
-                const cardContainers = document.querySelectorAll(".card-container");
-                cardContainers.forEach((container) => {
-                    container.style.display = "block";
+    
+                this.allCardContainers.forEach(container => {
+                    container.style.display = "flex"; 
                 });
-
-                this.updateArticleCount(cardContainers.length);
+    
+                this.updateArticleCount(this.allCardContainers.length);
             });
         }
 
