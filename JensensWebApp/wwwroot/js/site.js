@@ -49,7 +49,6 @@ class CardLoader {
   }
 
   reset() {
-    this.cardsContainer.innerHTML = '';
     this.currentIndex = 0;
     this.loadMoreButton.style.display = "block";
     this.loadCards();
@@ -63,6 +62,7 @@ class ArticleCounter{
     this.filterButton = document.getElementById(filterButtonId); // selects the filter button
     this.articleCountParagraph = document.getElementById(articleCountParagraphId); // selects the <p> element in which the article count will be displayed.
 
+
     this.filterButton.addEventListener("click", () => this.countArticles()); // calls the function when the filter button is pressed
     this.countArticles(); // calls the function when the class is instantiated
   }
@@ -71,6 +71,10 @@ class ArticleCounter{
     const hiddenCards = document.querySelectorAll(this.hiddenCardsSelector);
     const displayedCards = document.querySelectorAll(this.displayedCardsSelector);
     this.articleCountParagraph.innerText = (hiddenCards.length + displayedCards.length) + " articles found";
+  }
+  
+   countSearchArticles(cardsNumber) {
+    this.articleCountParagraph.innerText = (cardsNumber) + " articles found";
   }
 }
 
@@ -85,6 +89,7 @@ class ArticleSearch {
     }
 
     searchArticles() {
+      
         const searchTerm = this.searchInput.value.toLowerCase();
         const allCards = document.querySelectorAll("#allCards .card-container");
         const filteredCards = [];
@@ -96,12 +101,12 @@ class ArticleSearch {
                 filteredCards.push(card);
             }
         });
-
+        
         this.cardLoader.allCards = filteredCards;
-        this.cardLoader.reset();
+        this.cardLoader.reset()
 
         // Update article count text
-      this.articleCounter.countArticles();
+        this.articleCounter.countSearchArticles(filteredCards.length);
     }
   }
 
