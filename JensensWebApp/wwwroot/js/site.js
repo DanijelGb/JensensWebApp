@@ -47,11 +47,18 @@ class CardLoader {
       this.loadMoreButton.style.display = "none";
     }
   }
-
   reset() {
+    this.cardsContainer.innerHTML = '';
     this.currentIndex = 0;
     this.loadMoreButton.style.display = "block";
     this.loadCards();
+  }
+    moveAllCardsBack() {
+    const allCardsContainer = document.getElementById('allCards');
+    this.allCards.forEach(card => {
+      allCardsContainer.appendChild(card);
+    });
+    this.currentIndex = 0;
   }
 }
 
@@ -85,9 +92,11 @@ class ArticleSearch {
         this.cardLoader = cardLoader;
         this.articleCounter = articleCounter;
 
-        this.searchButton.addEventListener("click", () => this.searchArticles());
+        this.searchButton.addEventListener("click", () => {
+        this.cardLoader.moveAllCardsBack();
+        this.searchArticles();
+      });
     }
-
     searchArticles() {
       
         const searchTerm = this.searchInput.value.toLowerCase();
@@ -108,7 +117,8 @@ class ArticleSearch {
         // Update article count text
         this.articleCounter.countSearchArticles(filteredCards.length);
     }
-  }
+  } 
+  
 
 document.addEventListener('DOMContentLoaded', () => {
   new ScrollToTop('scroll-to-top');
