@@ -120,11 +120,6 @@ class ArticleSearch {
   } 
   
 
-document.addEventListener('DOMContentLoaded', () => {
-  new ScrollToTop('scroll-to-top');
-  const cardLoader = new CardLoader("#allCards .card-container", "cards-container", "loadMoreButton", 10);
-  const articleCounter = new ArticleCounter("#allCards .card-container", "#cards-container .card-container", "filter-button", "article-count-text");
-  new ArticleSearch("searchInput", "searchButton", cardLoader, articleCounter);
 class ArticleSummarizor{
   constructor (button, modalContent){
     this.url = button.nextElementSibling.href;              // gets the url related to the button clicked.
@@ -213,7 +208,8 @@ class ModalOpener {
 
 document.addEventListener('DOMContentLoaded', () => {
   new ScrollToTop('scroll-to-top');
-  new CardLoader("#allCards .card-container", "cards-container", "loadMoreButton", 10); // Creates an instance of the class when the dom content has loaded.
-  new ArticleCounter("#allCards .card-container", "#cards-container .card-container", "filter-button", "article-count-text"); // Creates an instance of the class when the dom content has loaded.
+  const cardLoader = new CardLoader("#allCards .card-container", "cards-container", "loadMoreButton", 10);
+  const articleCounter = new ArticleCounter("#allCards .card-container", "#cards-container .card-container", "filter-button", "article-count-text");
+  new ArticleSearch("searchInput", "searchButton", cardLoader, articleCounter);
   new ModalOpener();
 });
