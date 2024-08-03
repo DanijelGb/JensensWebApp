@@ -7,6 +7,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.search-container {
+    padding: 4px;
+    display: flex;
+    margin-left: 74%;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
 .container {
     width: 100%;
 }
