@@ -127,6 +127,7 @@ class ArticleSummarizor{
     this.modalContent = modalContent; 
     this.h3 = this.modalContent.children[0];                // selects the h3-element       
     this.p = this.modalContent.children[1];                 // selects the p-element
+    this.loader = document.getElementsByClassName("loader")[0];
     this.summary = "";
 
     this.UpdateModal();                                     // runs the function for updating modal-content.
@@ -135,6 +136,9 @@ class ArticleSummarizor{
   async UpdateModal() {
     this.h3.innerText = this.title;
     this.p.innerText = await this.Summarize();              // Runs the function for sending a request to the api
+    this.loader.style.display = "none";
+    this.h3.style.display = "block";
+    this.p.style.display = "block";
   }
 
   async Summarize() {                                       // running asynchronously so the program waits for the fetch to complete. 
@@ -166,6 +170,9 @@ class ModalOpener {
     this.btns = document.querySelectorAll(".summarizeBtn");       // The class handles opening and closing of the modal. You can close it by either
     this.span = document.getElementsByClassName("closeBtn")[0];   // clicking the button or anywhere on the screen outside of the modal.
     this.modalContent = this.modal.querySelector(".modal-content");
+    this.loader = document.getElementsByClassName("loader")[0];
+    this.h3 = this.modalContent.children[0];                // selects the h3-element       
+    this.p = this.modalContent.children[1];                 // selects the p-element
 
     this.init();
     }
@@ -202,6 +209,9 @@ class ModalOpener {
 
     CloseModal() {
         this.modal.style.display = "none";
+        this.h3.style.display = "none";
+        this.p.style.display = "none";
+        this.loader.style.display = "block";
     }
     
 }
